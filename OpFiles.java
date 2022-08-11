@@ -15,9 +15,9 @@ public class OpFiles extends OpLockers {
 		}
 	
 	protected void display() {	
-		System.out.println("\t*******************************************************************************************");
+		System.out.println("\t********************************************************************");
 		System.out.println("\t\t\t\t    "+ lockerpath);
-		System.out.println("\t*******************************************************************************************");
+		System.out.println("\t********************************************************************");
 		System.out.println("\t\t\t\t2. LOCKER  OPERATION");
 		System.out.println("\t-------------------------------------------------------------------------------------------");
 		System.out.println("--MENU OPTIONS--");

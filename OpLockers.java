@@ -19,11 +19,11 @@ public class OpLockers extends Lockers{
 	}
 			
 	protected void display() {
-		System.out.println("\n\n\t*******************************************************************************************");
+		System.out.println("\n\n\t**********************************************************************");
 		System.out.println("\t\t\t\t     "+lockerpath);
-		System.out.println("\t*******************************************************************************************");
+		System.out.println("\t**************************************************************************");
 		System.out.println("\n");
-		//System.out.println("\t-------------------------------------------------------------------------------------------"); 
+		//System.out.println("\t-------------------------------------------------------------------------"); 
 		System.out.println("\t\t1. Display Files ");
 		System.out.println("\t\t2. Business Operations");
 		//System.out.println("\t\t\t*  ADD NEW FILE");
@@ -34,9 +34,9 @@ public class OpLockers extends Lockers{
 	}
 	
 	protected void display(int menu, String menuname) {	// method overloaded
-		System.out.println("\t*******************************************************************************************");
+		System.out.println("\t****************************************************************************");
 		System.out.println("\t\t\t\t"+menu+". "+ menuname);
-		System.out.println("\t-------------------------------------------------------------------------------------------");
+		System.out.println("\t----------------------------------------------------------------------------");
 	}
 	
 	protected void createIt() {	

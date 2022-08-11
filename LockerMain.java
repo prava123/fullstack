@@ -1,6 +1,7 @@
 package fullstack;
 
 import java.io.File;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -112,22 +113,19 @@ public static  void main(String[] args)
 			}												//end of mainmenu switch
 					
 	}while(mainmenuflag==true);
-//System.exit(0);
-
+//System.exit(
 }//end of main()
 		
 		
 private static void display() {
 	System.out.println();
-	System.out.println("\t*******************************************************************************************");
-	System.out.println("\t\t\t\t\tWELCOME");
-	System.out.println("\r\t\t\t\t\t  tO");
-	System.out.println("\r\t\t\t\t     LOCKEDME.COM");
-	//System.out.println("\r");
-	System.out.println("\t*******************************************************************************************");
-	//System.out.println("\t-------------------------------------------------------------------------------------------");
+	System.out.println("\t\t\t\t ***********************************************");
+	System.out.println("\t\t\t\t\t\t WELCOME");
+	System.out.println("\r\t\t\t\t\t\t  tO");
+	System.out.println("\r\t\t\t\t\t\t  LOCKEDME.COM");
+	System.out.println("\t\t\t\t **********************************************");
 	
-	System.out.println("\t\t\tDIGITAL LOCKERS by \"LOCKERS PVT.LTD.\"");
+	System.out.println("\t\t\t\t\t\t\"DIGITAL LOCKERS PVT.LTD.\"");
 	System.out.println("\t-------------------------------------------------------------------------------------------");
 	System.out.println("\t\t\t\tDeveloper: pravallika jonnalagadda");
 	System.out.println();
@@ -139,8 +137,18 @@ private static int chooseLockerType() {
 	Scanner sc= new Scanner(System.in);
 	System.out.println("Choose Locker Type\n"
 							+ "1. Generic Locker [LOCKEDME.COM]\n"
-							+ "2. Custom Locker [LOCKEDME.COM/<named locker>]");
-	int locktype= sc.nextInt();
+							+ "2. Custom Locker [LOCKEDME.COM/<named locker>]" );
+	int locktype= 0;
+	try
+	{
+		locktype= sc.nextInt();
+		
+	}
+	catch(InputMismatchException e)
+	{
+		System.out.println("Kindly choose the correct option\n");
+		chooseLockerType();
+	}
 	return locktype;
 }
 private static String fromConsole() {
